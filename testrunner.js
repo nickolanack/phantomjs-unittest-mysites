@@ -59,7 +59,6 @@ sites.forEach(function(site){
 			console.log('waiting for 10s - to ensure qunit completes');
 
 
-
 		}else{
 			phantom.exit(1);
 		}

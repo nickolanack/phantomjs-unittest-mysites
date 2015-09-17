@@ -4,8 +4,6 @@
 
 
 var sites = [{ "url":"http://newspoverty.geolive.ca",  "test":"http://newspoverty.geolive.ca/unitest.js" }];
-
-
 console.log('Hello World');
 
 phantom.exit(0);
@@ -34,7 +32,7 @@ sites.forEach(function(site){
 	
 	
 
-	page.open(url), function(status) {
+	page.open(url, function(status) {
 		console.log("Status: " + status);
 		if(status === "success") {
 

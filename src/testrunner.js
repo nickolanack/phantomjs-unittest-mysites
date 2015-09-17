@@ -55,7 +55,7 @@ sites.forEach(function(site){
 			setTimeout(function(){
 				var path=url.replace('://', '>>').replace('/','>');
 				fs.write(path, page.content, 'w');
-				
+				phantom.exit();
 				
 			}, 10000);
 			

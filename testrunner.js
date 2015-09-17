@@ -1,13 +1,14 @@
 /**
  * 
  */
+console.log(trace);
 var page = require('webpage').create();
-var sites = require('./sites.json');
+var sites = [{ "url":"http://newspoverty.geolive.ca",  "test":"http://newspoverty.geolive.ca/unitest.js" }];
 
 phantom.onError=function(msg, trace){
 	console.error( msg);
 	console.error(trace);
-	
+
 });
 
 

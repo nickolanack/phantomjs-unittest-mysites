@@ -21,9 +21,9 @@ sites.forEach(function(site){
 	var page = require('webpage').create();
 	page.onError=function(msg, trace){
 
-		console.log('error: '+ msg);
-		console.log(trace);
-		phantom.exit(1);
+		console.error('error: '+ msg);
+		console.error(trace);
+		//phantom.exit(1);
 
 	};
 	page.onConsoleMessage = function(msg, lineNum, sourceId) {

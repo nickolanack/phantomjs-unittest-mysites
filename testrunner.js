@@ -2,7 +2,7 @@
  * 
  */
 console.log(trace);
-var page = require('webpage').create();
+
 var sites = [{ "url":"http://newspoverty.geolive.ca",  "test":"http://newspoverty.geolive.ca/unitest.js" }];
 
 phantom.onError=function(msg, trace){
@@ -12,17 +12,6 @@ phantom.onError=function(msg, trace){
 });
 
 
-page.onError=function(msg, trace){
-
-	console.log('error: '+ msg);
-	console.log(trace);
-	phantom.exit(1);
-
-};
-page.onConsoleMessage = function(msg, lineNum, sourceId) {
-	console.log('CONSOLE: ' + msg );
-};
-
 
 sites.forEach(function(site){
 
@@ -31,6 +20,21 @@ sites.forEach(function(site){
 
 
 	console.log('testing: '+url+' with: '+test);
+	
+	var page = require('webpage').create();
+	page.onError=function(msg, trace){
+
+		console.log('error: '+ msg);
+		console.log(trace);
+		phantom.exit(1);
+
+	};
+	page.onConsoleMessage = function(msg, lineNum, sourceId) {
+		console.log('CONSOLE: ' + msg );
+	};
+
+	
+	
 
 
 	page.open(url), function(status) {

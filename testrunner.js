@@ -5,13 +5,10 @@ console.log(trace);
 
 var sites = [{ "url":"http://newspoverty.geolive.ca",  "test":"http://newspoverty.geolive.ca/unitest.js" }];
 
-phantom.onError=function(msg, trace){
-	console.error( msg);
-	console.error(trace);
 
-});
+console.log('Hello World');
 
-
+phantom.exit(0);
 
 sites.forEach(function(site){
 
@@ -35,7 +32,7 @@ sites.forEach(function(site){
 
 	
 	
-
+	
 
 	page.open(url), function(status) {
 		console.log("Status: " + status);

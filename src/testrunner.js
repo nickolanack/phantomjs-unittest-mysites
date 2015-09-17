@@ -35,6 +35,10 @@ sites.forEach(function(site){
 	page.open(url, function(status) {
 		console.log("Status: " + status);
 		if(status === "success") {
+			
+			
+			page.evaluate(require('./qunit.js'));
+			
 
 			setTimeout(function(){
 

@@ -4,6 +4,13 @@
 var page = require('webpage').create();
 var sites = require('./sites.json');
 
+phantom.onError=function(msg, trace){
+	console.error( msg);
+	console.error(trace);
+	
+});
+
+
 page.onError=function(msg, trace){
 
 	console.log('error: '+ msg);

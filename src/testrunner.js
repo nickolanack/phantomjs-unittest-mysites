@@ -39,17 +39,11 @@ sites.forEach(function(site){
 		if(status === "success") {
 
 
-			page.evaluate(function(){
-				//window.addEventListener('domready',function(){
-					document.head.appendChild(
-							document.createElement('<script src="http://code.jquery.com/qunit/qunit-1.19.0.js" type="text/javascript"></script>'));
-					document.head.appendChild(
-							document.createElement('<link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.19.0.css" type="text/css" />'));
-					document.head.appendChild(
-							document.createElement('<script src="'+test+'" type="text/javascript"></script>'));
-				//});
+			page.includeJs("http://code.jquery.com/qunit/qunit-1.19.0.js");
+			page.includeJs(test);
 
-			});
+
+
 
 
 			setTimeout(function(){

@@ -22,7 +22,7 @@ sites.forEach(function(site){
 	page.onError=function(msg, trace){
 
 		console.error('error: '+ msg);
-		console.error(trace);
+		console.error(Object.keys(trace));
 		//phantom.exit(1);
 
 	};

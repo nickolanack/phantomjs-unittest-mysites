@@ -22,7 +22,7 @@ sites.forEach(function(site){
 	var test=site.test;
 
 
-
+	console.log('testing: '+url+' with: '+test);
 
 
 	page.open(url), function(status) {

@@ -1,7 +1,7 @@
 /**
  * 
  */
-console.log(trace);
+
 
 var sites = [{ "url":"http://newspoverty.geolive.ca",  "test":"http://newspoverty.geolive.ca/unitest.js" }];
 

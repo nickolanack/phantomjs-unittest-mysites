@@ -23,8 +23,7 @@ sites.forEach(function(site){
 
 		console.error('error: '+ msg);
 		console.error(Object.keys(trace));
-		//phantom.exit(1);
-
+		// phantom.exit(1);
 	};
 	page.onConsoleMessage = function(msg, lineNum, sourceId) {
 		console.log('CONSOLE: ' + msg );
